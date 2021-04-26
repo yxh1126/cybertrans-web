@@ -1,0 +1,24 @@
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+    About
+{% endblock %}
+
+{% block body_block %}
+    <h1>Rango says...</h1>
+    <div>
+        <strong>{{ boldmessage }}</strong><br />
+        {% if user.is_authenticated %}
+            ...howdy {{ user.username }}!
+        {% else %}
+            ...hey there partner!
+        {% endif %}
+        <br />
+    </div>
+
+    <div>
+        <img src="{{ MEDIA_URL }}python.png" alt="Picture of Rango" /> <br/>
+        <img src="{% static 'images/wp.jpeg' %}" alt="Picture of Rango"/>
+    </div>
+{% endblock %}

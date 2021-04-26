@@ -1,0 +1,21 @@
+<ul>
+{% if cats %}
+    {% for c in cats %}
+        {% if c == act_cat %}
+            <li>
+                <strong>
+                    <a href="{% url 'rango_app:show_category' category_name_slug=c.slug %}">
+                        {{ c.name }}
+                    </a>
+                </strong>
+            </li>
+        {% else %}
+            <li>
+                <a href="{% url 'rango_app:show_category' category_name_slug=c.slug %}">
+                    {{ c.name }}
+                </a>
+            </li>
+        {% endif %}
+    {% endfor %}
+{% endif %}
+</ul>
