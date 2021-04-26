@@ -1,6 +1,6 @@
 import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE',
-                      'project_cybertrans.settings')
+                      'cybertrans.settings')
 
 import django
 django.setup()
