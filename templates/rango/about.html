@@ -12,13 +12,13 @@
         {% if user.is_authenticated %}
             ...howdy {{ user.username }}!
         {% else %}
-            ...hey there partner!
+            ...hey there Partner!
         {% endif %}
         <br />
     </div>
 
     <div>
-        <img src="{{ MEDIA_URL }}python.png" alt="Picture of Rango" /> <br/>
-        <img src="{% static 'images/wp.jpeg' %}" alt="Picture of Rango"/>
+        <img src="{% static 'images/rango.jpg' %}" alt="Picture of Rango"/> <br/>
+        <img src="{{ MEDIA_URL }}python.png" alt="Picture of Python" />
     </div>
 {% endblock %}
