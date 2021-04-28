@@ -31,10 +31,10 @@
         {% if user.is_authenticated %}
             <li><a href="{% url 'rango_app:restricted' %}">Restricted Page</a></li>
             <li><a href="{% url 'rango_app:add_category' %}">Add a New Category</a></li>
-            <li><a href="{% url 'rango_app:logout' %}">Logout</a></li>
+            <li><a href="{% url 'auth_logout' %}?next=/rango/">Logout</a></li>
         {% else %}
-            <li><a href="{% url 'rango_app:login' %}">Sign In</a></li>
-            <li><a href="{% url 'rango_app:register' %}">Sign Up</a></li>
+            <li><a href="{% url 'auth_login' %}">Sign In</a></li>
+            <li><a href="{% url 'registration_register' %}">Sign Up</a></li>
         {% endif %}
             <li><a href="{% url 'rango_app:index' %}">Index</a></li>
             <li><a href="{% url 'rango_app:about' %}">About</a></li>

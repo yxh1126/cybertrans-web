@@ -4,6 +4,7 @@ bcrypt==3.2.0
 cffi==1.14.5
 decorator==5.0.7
 Django==3.2
+django-registration-redux==2.9
 ipython==7.22.0
 ipython-genutils==0.2.0
 jedi==0.18.0
